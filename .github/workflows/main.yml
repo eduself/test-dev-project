@@ -2,7 +2,7 @@ name: Deploy website on push
 on: 
   push:
     branches:
-      - maruf
+      - main
 jobs:
   web-deploy:
     name: Deploy
@@ -14,10 +14,10 @@ jobs:
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: 194.233.94.185
-        username: ${{ secrets.ftp_username_maruf }}
-        password: ${{ secrets.ftp_password_maruf }}
-        protocol: ftps
+        # server: 194.233.94.185
+        # username: ${{ secrets.ftp_username_maruf }}
+        # password: ${{ secrets.ftp_password_maruf }}
+        # protocol: ftps
         # port: 21
         # server-dir: /maruf.bizzself.top/
         # timeout: 120000
